@@ -7,11 +7,14 @@
 # windows only - you can use 'system' to control the "system sounds" volume
 # important: slider indexes start at 0, regardless of which analog pins you're using!
 slider_mapping:
-  0: master
-  1: chrome.exe
-  2: brave.exe
-  3: deej.unmapped
-  4: discord.exe
+  0: deej.unmapped
+  1:
+    - jellyfin
+    - factorio
+  2: chrome
+  3: firefox-bin
+  4: mic
+  5: master
 
 # supported button list https://github.com/micmonay/keybd_event/blob/master/keybd_windows.go (scroll down)
 # be sure to convert hex values to decimal (hex values start with 0x)
@@ -25,19 +28,25 @@ slider_mapping:
 # If the number of buttons is not the same, deej might crash 
 #
 button_mapping:
-  0: 4228
-  1: 4272
-  2: 4274
-  3: 4271
-  4: 4229
-  5: 4230
+  # mute microphone
+  0: 248
+  # mute audio
+  1: 113
+  # system sleep
+  2: 142
+  # track back
+  3: 165
+  # pause
+  4: 164
+  # forward
+  5: 163
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
 invert_sliders: false
 
 # settings for connecting to the arduino board
-com_port: COM6
-baud_rate: 9600
+com_port: /dev/ttyUSB0
+baud_rate: 115200
 
 # adjust the amount of signal noise reduction depending on your hardware quality
 # supported values are "low" (excellent hardware), "default" (regular hardware) or "high" (bad, noisy hardware)
