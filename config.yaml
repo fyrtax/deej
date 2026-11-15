@@ -9,10 +9,11 @@
 slider_mapping:
   0: deej.unmapped
   1:
-    - jellyfin
-    - factorio
+    - jellyfin-desktop
+    - "Factorio"
+    - "Red Dead Redemption 2"
   2: chrome
-  3: firefox-bin
+  3: Firefox
   4: mic
   5: master
 
